@@ -767,17 +767,16 @@
     <div class="section-tag reveal">Video Demo</div>
     <h2 class="section-title reveal">Vea Minimarket Pos en acción</h2>
     <p class="section-desc reveal" style="margin:0 auto 40px;">Un recorrido rápido por las funciones principales del sistema.</p>
-    <div class="reveal-scale">
+      <div class="reveal-scale">
       <div class="video-wrapper" id="videoWrapper">
-        <div class="video-placeholder" id="videoPlaceholder">
-          <span class="vp-badge">▶ Demo</span>
-          <div class="play-icon">▶</div>
-          <span class="vp-text">Haga clic para reproducir el demo</span>
+        <div class="video-placeholder" id="videoPlaceholder" style="cursor:default;">
+          <span class="vp-badge" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🕒 Próximamente</span>
+          <div style="font-size:3rem;margin-bottom:12px;">🎬</div>
+          <span class="vp-text">Video demo en producción — muy pronto podrá ver Minimarket Pos en acción</span>
         </div>
         <iframe id="videoIframe" style="display:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <p class="reveal" style="color:#475569;font-size:0.78rem;margin-top:16px;">¿No carga el video? <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noopener" style="color:#fbbf24;">Ver en YouTube</a></p>
   </div>
 </section>
 
@@ -1684,12 +1683,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   this.reset();
 });
 
-/* Video demo - click to load YouTube */
+/* Video demo placeholder */
 document.getElementById('videoPlaceholder')?.addEventListener('click', function() {
-  const iframe = document.getElementById('videoIframe');
-  iframe.src = 'https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0';
-  iframe.style.display = 'block';
-  this.style.display = 'none';
+  if (!document.querySelector('.vp-badge').textContent.includes('Próximamente')) return;
+  // Video no disponible aún
 });
 </script>
 </body>
