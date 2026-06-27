@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jng87650-commits.github.io/minimarket-pos-landing/sitemap.xml
