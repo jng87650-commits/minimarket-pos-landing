@@ -469,6 +469,49 @@
     .form-toast { position: fixed; bottom: 90px; right: 24px; z-index: 999; background: #059669; color: #fff; padding: 12px 24px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 8px 24px rgba(5,150,105,0.4); opacity: 0; transform: translateY(20px); transition: opacity 0.4s, transform 0.4s; pointer-events: none; }
     .form-toast.show { opacity: 1; transform: translateY(0); }
 
+    /* Sticky CTA bar */
+    .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 997; background: rgba(11,18,32,0.95); backdrop-filter: blur(16px); border-top: 1px solid rgba(255,255,255,0.06); padding: 10px 20px; display: flex; align-items: center; justify-content: center; gap: 16px; transform: translateY(100%); transition: transform 0.4s ease; flex-wrap: wrap; }
+    .sticky-cta.show { transform: translateY(0); }
+    .sticky-cta span { color: #e2e8f0; font-size: 0.88rem; font-weight: 600; }
+    .sticky-cta a { padding: 10px 24px; background: linear-gradient(135deg,#f59e0b,#d97706); color: #0b1220; font-weight: 700; font-size: 0.85rem; border-radius: 10px; text-decoration: none; transition: all 0.25s; white-space: nowrap; }
+    .sticky-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+    .sticky-cta .close-cta { background: none; border: none; color: #475569; font-size: 18px; cursor: pointer; padding: 4px; }
+
+    /* Why us */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+    .why-card { background: linear-gradient(145deg,rgba(255,255,255,0.03),rgba(255,255,255,0.005)); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px 24px; text-align: left; }
+    .why-card .icon { font-size: 2rem; margin-bottom: 8px; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: #fbbf24; }
+    .why-card p { color: #94a3b8; font-size: 0.85rem; line-height: 1.7; }
+    .why-card .check { color: #10b981; font-weight: 700; }
+    .why-card .cross { color: #ef4444; }
+    .why-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.85rem; }
+    .why-table th, .why-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); text-align: left; }
+    .why-table th { color: #64748b; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .why-table td { color: #cbd5e1; }
+    .why-table td:first-child { color: #94a3b8; font-weight: 500; }
+    .why-table .highlight { color: #fbbf24; font-weight: 700; }
+
+    /* Integrations */
+    .int-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px; }
+    .int-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 20px 16px; text-align: center; transition: all 0.3s; }
+    .int-card:hover { border-color: rgba(251,191,36,0.15); transform: translateY(-3px); }
+    .int-card .icon { font-size: 2rem; margin-bottom: 8px; }
+    .int-card h4 { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+    .int-card p { font-size: 0.72rem; color: #64748b; }
+
+    /* Email capture */
+    .email-section { background: linear-gradient(135deg,rgba(251,191,36,0.04),rgba(217,119,6,0.02)); border: 1px solid rgba(251,191,36,0.08); border-radius: 20px; padding: 48px 40px; text-align: center; margin: 40px 0 0; }
+    .email-section h3 { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .email-section p { color: #94a3b8; font-size: 0.88rem; margin-bottom: 20px; }
+    .email-form { display: flex; gap: 10px; max-width: 480px; margin: 0 auto; }
+    .email-form input { flex: 1; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; background: rgba(255,255,255,0.03); color: #e2e8f0; font-size: 0.9rem; }
+    .email-form input:focus { outline: none; border-color: #fbbf24; }
+    .email-form button { padding: 14px 28px; background: linear-gradient(135deg,#f59e0b,#d97706); border: none; border-radius: 10px; color: #0b1220; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.25s; white-space: nowrap; }
+    .email-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+    .email-form .cta-toast { position: fixed; bottom: 90px; right: 24px; z-index: 999; background: #059669; color: #fff; padding: 12px 24px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 8px 24px rgba(5,150,105,0.4); opacity: 0; transform: translateY(20px); transition: opacity 0.4s, transform 0.4s; pointer-events: none; }
+    .email-form .cta-toast.show { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 900px) {
       .testimonials-grid { grid-template-columns: 1fr; }
       .whatsapp-float { width: 48px; height: 48px; bottom: 16px; right: 16px; }
@@ -477,7 +520,14 @@
       .req-grid, .contact-grid { grid-template-columns: 1fr; }
       .contact-form .form-row { grid-template-columns: 1fr; }
       .cl-item { flex-direction: column; gap: 6px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .int-grid { grid-template-columns: repeat(2,1fr); }
+      .email-form { flex-direction: column; }
+      .sticky-cta span { display: none; }
+      .sticky-cta { padding: 8px 12px; gap: 8px; }
+      .sticky-cta a { font-size: 0.8rem; padding: 8px 16px; }
     }
+    @media (max-width: 480px) { .int-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -497,6 +547,7 @@
     <div class="nav-links">
       <a href="#demo">Demo</a>
       <a href="#features">Características</a>
+      <a href="#why-us">¿Por qué?</a>
       <a href="#video-demo">Video</a>
       <a href="#pricing">Planes</a>
       <a href="#changelog">Novedades</a>
@@ -778,6 +829,48 @@
   </div>
 </section>
 
+<section id="why-us" style="background:rgba(255,255,255,0.015);">
+  <div class="container" style="text-align:center;">
+    <div class="section-tag reveal">Por qué elegirnos</div>
+    <h2 class="section-title reveal">¿Por qué Minimarket Pos es diferente?</h2>
+    <p class="section-desc reveal" style="margin:0 auto 40px;">Mientras otros sistemas POS dependen de internet y cobran mensualidades, nosotros funcionamos 100% offline con un solo pago.</p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="icon">💻</div>
+        <h3>Funciona sin internet</h3>
+        <p>Tu negocio no se detiene cuando falla el internet. Minimarket Pos almacena todo localmente con SQLite. No necesitas conexión para facturar, vender o consultar tu inventario.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="icon">💰</div>
+        <h3>Pago único, sin mensualidades</h3>
+        <p>Olvídate de suscripciones mensuales. Con la licencia permanente pagas una vez y usas el sistema de por vida. Las actualizaciones están incluidas.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="icon">🇩🇴</div>
+        <h3>Hecho para RD</h3>
+        <p>Diseñado específicamente para el mercado dominicano. Incluye facturación con NCF, ITBIS, propina de ley 10% y formatos fiscales autorizados por la DGII.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="icon">📦</div>
+        <h3>Todo en uno</h3>
+        <p>POS, inventario con kardex, cuentas por cobrar/pagar, reportes, órdenes de compra, control de caja, clientes y proveedores en un solo sistema de escritorio.</p>
+      </div>
+      <div class="why-card reveal" style="grid-column:1/3;">
+        <h3 style="margin-bottom:16px;">Comparativa rápida</h3>
+        <table class="why-table">
+          <tr><th></th><th>Minimarket Pos</th><th>POS en la nube</th><th>POS genérico</th></tr>
+          <tr><td>Funciona sin internet</td><td class="highlight">✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
+          <tr><td>Facturación NCF</td><td class="highlight">✅ Incluida</td><td>✅ Incluida</td><td>⚠️ Extra</td></tr>
+          <tr><td>Pago único</td><td class="highlight">✅ Desde $299/año o $499 permanente</td><td>❌ Mensual</td><td>⚠️ Anual</td></tr>
+          <tr><td>Kardex digital</td><td class="highlight">✅ Incluido</td><td>⚠️ Extra</td><td>⚠️ Limitado</td></tr>
+          <tr><td>Prueba gratis</td><td class="highlight">✅ 30 días sin tarjeta</td><td>⚠️ 7-15 días</td><td>⚠️ Limitada</td></tr>
+          <tr><td>Datos locales (privacidad)</td><td class="highlight">✅ 100% local</td><td>❌ En la nube</td><td>⚠️ Mixto</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="video-demo">
   <div class="container" style="text-align:center;">
     <div class="section-tag reveal">Video Demo</div>
@@ -913,6 +1006,49 @@
           <tr><td>Resolución</td><td>1280×800 o superior</td></tr>
           <tr><td>Extra</td><td>SQLite (incluido)</td></tr>
         </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="integrations">
+  <div class="container" style="text-align:center;">
+    <div class="section-tag reveal">Integraciones</div>
+    <h2 class="section-title reveal">Hardware y dispositivos compatibles</h2>
+    <p class="section-desc reveal" style="margin:0 auto 40px;">Minimarket Pos funciona con el hardware que ya tienes o puedes conseguir fácilmente en RD.</p>
+    <div class="int-grid">
+      <div class="int-card reveal">
+        <div class="icon">🖨️</div>
+        <h4>Impresora Térmica</h4>
+        <p>Compatibilidad con impresoras térmicas de tickets USB (XP-POS, Epson, Star Micronics y genéricas).</p>
+      </div>
+      <div class="int-card reveal">
+        <div class="icon">📷</div>
+        <h4>Lector Código de Barras</h4>
+        <p>Lectores USB por emulación de teclado. Plug & play, no requiere configuración adicional.</p>
+      </div>
+      <div class="int-card reveal">
+        <div class="icon">💳</div>
+        <h4>Datafono / POS Bancario</h4>
+        <p>Usa cualquier datáfono de forma independiente. El sistema muestra el total en pantalla para cobro con tarjeta.</p>
+      </div>
+      <div class="int-card reveal">
+        <div class="icon">📠</div>
+        <h4>Cajón Monedero</h4>
+        <p>Compatible con cajones monederos de 12V con conector RJ-11/RJ-12. Apertura automática al cobrar.</p>
+      </div>
+      <div class="int-card reveal">
+        <div class="icon">🖥️</div>
+        <h4>Pantalla Táctil</h4>
+        <p>Optimizado para pantallas táctiles. Botones grandes e interfaz adaptada para uso touch en caja.</p>
+      </div>
+      <div class="int-card reveal">
+        <div class="icon">⚖️</div>
+        <h4>Báscula / Escáner</h4>
+        <p>Soporte para básculas con puerto serie/USB y lectores de código de barras integrados.</p>
+      </div>
+      <div class="int-card reveal" style="grid-column:2/4;">
+        <p style="color:#64748b;font-size:0.82rem;">🔌 ¿Tienes un dispositivo diferente? Escríbenos y verificamos la compatibilidad.</p>
       </div>
     </div>
   </div>
@@ -1095,6 +1231,20 @@
           <div><div class="name">Carlos Guzmán</div><div class="role">Proveedora Guzmán, La Vega</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="container" style="text-align:center;">
+    <div class="email-section reveal">
+      <h3>📬 Recibe novedades y ofertas exclusivas</h3>
+      <p>Suscríbete y entérate primero de nuevas versiones, promociones y consejos para tu minimarket. Sin spam, máximo 1 correo al mes.</p>
+      <form class="email-form" id="emailForm">
+        <input type="email" id="emailInput" placeholder="tu@correo.com" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+      <div class="cta-toast" id="emailToast">✓ Gracias por suscribirte</div>
     </div>
   </div>
 </section>
@@ -1309,19 +1459,28 @@
 
 <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
 
+<div class="sticky-cta" id="stickyCta">
+  <span>⚡ 30 días de prueba gratis — sin tarjeta</span>
+  <a href="#download">Descargar Prueba Gratis</a>
+  <button class="close-cta" id="closeCta" aria-label="Cerrar">✕</button>
+</div>
+
 <footer>
   <div class="container">
     <div class="links" style="flex-wrap:wrap;justify-content:center;">
       <a href="#demo">Demo</a>
       <a href="#features">Características</a>
+      <a href="#why-us">¿Por qué?</a>
       <a href="#video-demo">Video</a>
       <a href="#pricing">Planes</a>
       <a href="#download">Descargar</a>
       <a href="#requirements">Requisitos</a>
+      <a href="#integrations">Integraciones</a>
       <a href="#changelog">Novedades</a>
       <a href="blog/">Blog</a>
       <a href="#faq">FAQ</a>
       <a href="#screenshots">Capturas</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#contact">Contacto</a>
       <a href="#" onclick="openModal('privacyModal');return false;">Privacidad</a>
       <a href="#" onclick="openModal('termsModal');return false;">Términos</a>
@@ -1708,10 +1867,26 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   this.reset();
 });
 
+/* Sticky CTA bar */
+const stickyCta = document.getElementById('stickyCta');
+document.getElementById('closeCta')?.addEventListener('click', () => stickyCta.classList.remove('show'));
+let ctaShown = false;
+window.addEventListener('scroll', () => {
+  if (!ctaShown && window.scrollY > 600) { stickyCta.classList.add('show'); ctaShown = true; }
+});
+
+/* Email form */
+document.getElementById('emailForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const toast = document.getElementById('emailToast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 4000);
+  this.reset();
+});
+
 /* Video demo placeholder */
 document.getElementById('videoPlaceholder')?.addEventListener('click', function() {
   if (!document.querySelector('.vp-badge').textContent.includes('Próximamente')) return;
-  // Video no disponible aún
 });
 </script>
 </body>
